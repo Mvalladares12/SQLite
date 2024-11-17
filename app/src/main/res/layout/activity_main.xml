@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="25dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Codigo"
+        android:id="@+id/etCodigo"
+        android:inputType="number"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descripcion"
+        android:id="@+id/etDescripcion"
+        android:inputType="text"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Precio"
+        android:id="@+id/etPrecio"
+        android:inputType="number"/>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnInsertar"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:onClick="alta"
+            android:text="Insertar" />
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:onClick="bajaporcodigo"
+            android:text="Eliminar" />
+    </LinearLayout>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnBCodigo"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:onClick="consultaporcodigo"
+            android:text="Buscar codigo" />
+
+        <Button
+            android:id="@+id/btnBDesc"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="90dp"
+            android:onClick="consultapordescripcion"
+            android:text="Buscar descripción" />
+    </LinearLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp"/>
+
+    <Button
+        android:id="@+id/btnActualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="modificacion"
+        android:text="Actualizar" />
+</LinearLayout>
